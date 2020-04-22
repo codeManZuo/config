@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/codeManZuo/configtest.git
+          search-paths:
+           -configrepo #(数组的方式)查找配置信息去哪个目录下
+          username: 1045612224@qq.com
+          password: 13636271840Zh
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+server:
+  port: 8022
+
+
